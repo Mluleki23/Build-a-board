@@ -1,0 +1,12 @@
+ body {
+  background-image: url("images/images.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+h1{
+    color: red;
+    text-align: center;
+}
