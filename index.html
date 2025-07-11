@@ -4,34 +4,48 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div id="background">
         <div id="top-button">
-        <a href="bios.html"><button>BIOS</button></a>
+        <a href="bios.html"><button>CLICKHERE TO VIEW</button></a>
         </div>  
 
-         <h1>MOTHERBOARD</h1>
-        <div id="rom">
-            <img src="images/rom-removebg-preview.png">
-        </div>
-        <div id="components">
-        <div id="cpu">
-            <img src="images/cpu-removebg-preview.png">
-</div>
-        <div id="ram">
-            <img src="images/ram-removebg-preview.png">
-            
-        </div>
-        <div id="cmos">
-            <img src="images/cmos-removebg-preview.png">
-        </div>
-        <style>
+
+       
+           <style>
        #components{
         display: flex  ;
     flex-direction: row;
        }
       
        </style>
+       
         
     </body>
+    <div class="container">
+    <img src="images/RPS630-R680E(F240717)_w600.png" alt="Motherboard" />
+       <!-- Click zones (adjust dimensions as needed) -->
+    <div class="component" style="top: 42%; left: 50%; width: 10%; height: 10%;" onclick="toggleInfo('cpu')"></div>
+    <div class="component" style="top: 68%; left: 55%; width: 20%; height: 10%;" onclick="toggleInfo('ram')"></div>
+    <div class="component" style="top: 12%; left: 12%; width: 12%; height: 10%;" onclick="toggleInfo('rom')"></div>
+    <div class="component" style="top: 40%; left: 40%; width: 5%; height: 10%;" onclick="toggleInfo('cmos')"></div>
+    <div class="component" style="top: 78%; left: 30%; width: 10%; height: 10%;" onclick="toggleInfo('storage')"></div>
+    <div class="component" style="top: 88%; left: 42%; width: 10%; height: 10%;" onclick="toggleInfo('power')"></div>
+
+    <!-- Info popups -->
+    <div id="cpu" class="info" style="top: 42%; left: 62%;">🧠 <strong>CPU:</strong> The Central Processing Unit processes instructions and coordinates tasks across the system.</div>
+    <div id="ram" class="info" style="top: 68%; left: 77%;">📘 <strong>RAM:</strong> Random Access Memory temporarily stores data being used or processed by the CPU.</div>
+    <div id="rom" class="info" style="top: 12%; left: 26%;">📀 <strong>ROM:</strong> Read-Only Memory contains firmware or essential boot instructions.</div>
+    <div id="cmos" class="info" style="top: 22%; left: 37%;">🔋 <strong>CMOS:</strong> Stores BIOS settings and is powered by a small battery.</div>
+    <div id="storage" class="info" style="top: 78%; left: 42%;">💾 <strong>Storage Drive:</strong> Long-term data storage like HDD or SSD for the operating system and files.</div>
+    <div id="power" class="info" style="top: 88%; left: 54%;">🔌 <strong>Power Unit:</strong> Converts and supplies electricity to all motherboard components.</div>
+  </div>
+
+  <script>
+    function toggleInfo(id) {
+      const infoBox = document.getElementById(id);
+      infoBox.style.display = (infoBox.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
     </html>
  
     
